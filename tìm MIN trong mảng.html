@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function searchMin(arr) {
+        // Coi như giá trị đầu tiên trong mảng là giá trị nhỏ nhất, ta lấy để đem so sánh lần lượt với các giá trị khác trong mảng
+        // Nên ta gán giá trị đầu tiên trong mảng vào 1 biến rồi đem đi so sánh với các giá trị còn lại của mảng
+        let draft = arr[0];                             // Gán giá trị đầu tiên của mảng vào 1 biến (Tạm gọi đây là giá trị nhỏ nhất trong mảng)
+        for (let i = 1; i < arr.length - 1; i++) {      // Chạy vòng lặp for từ biến liền kề biến đầu tiên
+            if (arr[i] < draft) {                       // So sánh giá trị "Nhỏ nhất trong mảng" với giá trị ngay sau nó
+                draft = arr[i];                         // Nếu giá trị đem so sánh nhỏ hơn giá trị đang "Nhỏ nhất trong mảng" thì ta gán giá trị nhỏ mới vào
+            }
+        }
+        return draft;                                   // Trả về kết quả
+    }
+</script>
+</body>
+</html>
